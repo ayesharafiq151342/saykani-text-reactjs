@@ -1,0 +1,45 @@
+/* Styling the navbar container */
+div {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the h1 headers */
+h1 {
+  color: #333;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Styling the ul and li elements */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+li:hover {
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+}
+
+/* For responsive design */
+@media (max-width: 600px) {
+  ul {
+    flex-direction: column;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}

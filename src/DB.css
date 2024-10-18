@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+input, button {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+  display: block; /* Block elements for better mobile layout */
+  width: calc(100% - 22px); /* Full width minus padding and border */
+}
+
+input:focus {
+  border-color: #28a745; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+  width: 100%; /* Full width for buttons */
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Flex container for user cards */
+.user-card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  justify-content: flex-start; /* Align cards to the left */
+  margin-top: 20px; /* Space above the card section */
+}
+
+/* Stylish user card */
+.user-card {
+  background: white;
+  border: 1px solid #ccc; /* Set border */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  margin: 10px; /* Reduce margin for better spacing */
+  padding: 20px;
+  flex: 1 1 calc(33.33% - 20px); /* Allow cards to grow/shrink with base width */
+  max-width: calc(33.33% - 20px); /* 3 cards per row with spacing */
+  box-sizing: border-box; /* Include border in width */
+  transition: transform 0.3s; /* Smooth scale on hover */
+}
+
+.user-card:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.user-card img {
+  border-radius:0%; /* Circular image */
+  margin-bottom: 10px;
+  width: 100px; /* Fixed size for the image */
+  height: 100px; /* Fixed size for the image */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.update-mode {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  /* For smaller devices like tablets and phones */
+  input, button {
+    width: calc(100% - 20px); /* Full width with smaller margins */
+    margin: 10px 0; /* Center input and button with small margins */
+  }
+
+  .user-card {
+    flex: 1 1 calc(100% - 20px); /* 1 card per row on small screens */
+    max-width: calc(100% - 20px); /* 1 card per row */
+  }
+}
